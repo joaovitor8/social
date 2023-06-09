@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "types": [
+      "nativewind/types" // Para o ReactNative usar o TailwindCSS
+    ]
+  },
+  "extends": "expo/tsconfig.base"
+}
