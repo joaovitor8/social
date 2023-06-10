@@ -1,7 +1,13 @@
+import { Feed } from '@/components/Feed'
+import { Header } from '@/components/Header'
+import { More } from '@/components/More'
+
 export default function Home() {
   return (
-    <div className="h-screen bg-zinc-950 text-zinc-50">
-      <h1 className="text-4xl font-bold">Sua cápsula do tempo</h1>
-    </div>
+    <main className="flex">
+      <Header />
+      <Feed />
+      <More />
+    </main>
   )
 }
