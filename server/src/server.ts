@@ -1,20 +1,21 @@
-import fastify from 'fastify' // Importando o Fastify
-import { PrismaClient } from '@prisma/client' // Importando o Prisma
+const fastify = require('fastify')()
 
-const app = fastify() // Configurando o Fastify em app
-const prisma = new PrismaClient() // Criando um DB
+// Criar uma postagem
+fastify.post('/postagem', async (request: any, reply: any) => {})
 
-app.get('/users', async () => {
-  const users = await prisma.user.findMany()
+// Pegar todas as postagem
+fastify.get('/postagem', async (request: any, reply: any) => {})
 
-  return users
-})
+// Pegar uma postagem
+fastify.get('/postagem/:id', async (request: any, reply: any) => {})
+
+// Atualizar uma postagem
+fastify.put('/postagem/:id', async (request: any, reply: any) => {})
+
+// Deletar uma postagem
+fastify.delete('/postagem/:id', async (request: any, reply: any) => {})
 
 // Iniciando o servidor
-app
-  .listen({
-    port: 3333,
-  })
-  .then(() => {
-    console.log('Servidor rodando na porta: http://localhost:3333')
-  })
+fastify.listen({ port: 3333 }).then(() => {
+  console.log('Servidor rodando na porta: http://localhost:3333')
+})
