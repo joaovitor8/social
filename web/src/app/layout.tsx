@@ -1,5 +1,7 @@
-import './globals.css'
 import { ReactNode } from 'react'
+import { Header } from '@/components/Header'
+import { More } from '@/components/More'
+import './globals.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-zinc-950 text-zinc-50">{children}</body>
+      <body className="flex bg-zinc-950 text-zinc-50">
+        <Header />
+        {children}
+        <More />
+      </body>
     </html>
   )
 }
